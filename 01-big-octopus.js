@@ -34,8 +34,15 @@ function linearBiggestFish(fishes) {
 
 tilesArray = ["up", "right-up", "right", "right-down", "down", "left-down", "left", "left-up"]
 function slowDance(direction, tilesArray) {
-  // Code goes here ...
+  for (let i = 0; i < tilesArray.length;i++){
+    if (direction === tilesArray[i]){
+      return i
+    }
+  }
 }
+console.log(slowDance("up", tilesArray)); // 0
+console.log(slowDance("right-down", tilesArray)); // 3
+
 
 
 tilesObj = {
@@ -48,6 +55,8 @@ tilesObj = {
   "left": 6,
   "left-up": 7
 }
+
+
 function fastDance(direction, tilesObj) {
   // Code goes here ...
 }
